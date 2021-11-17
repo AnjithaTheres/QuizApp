@@ -19,7 +19,7 @@ class QuizAppApplicationTests {
 @Autowired
 private QuestionRepository questionRepository;
 	
-	@Test
+	//@Test
 	public void TestCreateQuestion() {
 		Question question1 = new Question();
 		question1.setId(13);
@@ -34,7 +34,7 @@ private QuestionRepository questionRepository;
 		
 		
 	}
-	@Test
+	//@Test
 	
 	public void TestReadQuestion() {
 		List<Question> list = questionRepository.findAll();
@@ -46,17 +46,17 @@ private QuestionRepository questionRepository;
 	@Test
 
 	public void testDelete () {
-		Question question = questionRepository.findById(11);
+		Question question = questionRepository.findById(21);
 		questionRepository.deleteById(question.getId());
 		
-		Question deletedQuestion = questionRepository.findById(11);
+		Question deletedQuestion = questionRepository.findById(21);
 		assertNull(deletedQuestion);
 				
 		
 	
 	}   
 		
-	@Test
+	//@Test
 	public void testGet() {
 	    System.out.println("Running testGet...");
 	     
